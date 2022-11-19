@@ -5,3 +5,7 @@ scipy
 pandas
 seaborn==0.11.1
 scikit-learn
+statsmodels
+torch
+torchvision
+torchaudio

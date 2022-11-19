@@ -18,11 +18,10 @@ if exist %ENVNAME%\Scripts\activate (echo Environment exists) else (python -m ve
 rem Now, activate the environment
 call %ENVNAME%\Scripts\activate
 
-rem install required packages through the requirements document
+rem install required packages in the environment through the requirements document
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 
 rem Run jupyter lab from the virtual environment
 call jupyter lab
 
-pause
