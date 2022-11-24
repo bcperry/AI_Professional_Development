@@ -1,2 +1,4 @@
 .ipynb_checkpoints
 ai_env
+*.pt
+*.dot

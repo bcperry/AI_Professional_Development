@@ -9,3 +9,6 @@ Before the session:
     2a) Uncheck "Use admin privelages when installing py.exe"
     2b) check "Add python.exe to PATH"
     2c) click "Install Now"
+
+
+To close, click in the command prompt window and press Ctrl + C
