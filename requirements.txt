@@ -8,6 +8,8 @@ scikit-learn
 statsmodels
 graphviz
 ipywidgets
+gensim
+nltk
 torch
 torchvision
 torchaudio
