@@ -17,8 +17,9 @@ if exist %ENVNAME%\Scripts\activate (
     ) else (
 
         rem Start by installing and updating some packages in base python (if not installed)
-        python -m pip install --user virtualenv
-        python -m pip install --upgrade pip
+        rem Note: We cant use pip directly due to firewall issues, so use explicitly declare the trusted hosts
+        python -m pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org --user virtualenv
+        python -m pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org --upgrade pip
 
         rem create the environment
         python -m venv %ENVNAME%
@@ -27,8 +28,8 @@ if exist %ENVNAME%\Scripts\activate (
         call %ENVNAME%\Scripts\activate
 
         rem install required packages in the environment through the requirements file
-        python -m pip install --upgrade pip
-        python -m pip install -r requirements.txt
+        python -m pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org --upgrade pip
+        python -m pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org -r requirements.txt
         )
 
 
